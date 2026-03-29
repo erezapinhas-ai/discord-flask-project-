@@ -36,7 +36,10 @@ This project was created as part of a DevOps and Python development learning jou
 
 
 
-עברית :Discord Flask Project 🚀
+
+בעברית:
+
+Discord Flask Project 🚀
 אפליקציית Web מבוססת Flask לניהול תקשורת עם שרת Discord ותיעוד נתונים בזמן אמת.
 
 📋 אודות הפרויקט
