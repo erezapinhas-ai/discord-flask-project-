@@ -82,6 +82,8 @@ Discord Webhooks - ממשק API לשליחת מידע לשרת חיצוני.
 HTML & Jinja2 - בניית ממשק משתמש דינמי ותצוגת נתונים.
 
 📂מבנה הפרויקט
+<img width="738" height="550" alt="image" src="https://github.com/user-attachments/assets/8254ea4b-8745-4a03-9777-2c5fc1b7849c" />
+
 
 Plaintext
 
