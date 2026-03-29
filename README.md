@@ -1,4 +1,6 @@
 Discord Flask Project 🚀
+<img width="1070" height="740" alt="image" src="https://github.com/user-attachments/assets/c4ad4246-7abc-4abc-9a8c-35e4702c197d" />
+
 
 A Web application based on Flask that enables sending messages to a Discord server via Webhooks, with real-time logging and history tracking using an SQLite database.
 
@@ -7,6 +9,8 @@ A Web application based on Flask that enables sending messages to a Discord serv
 This project was developed as part of a hands-on learning process in Backend development and systems integration. The application allows users to send messages directly to a pre-defined Discord channel using Webhooks, while simultaneously storing all message history in a local database for monitoring and auditing.
 
 🛠 Technologies Used
+<img width="924" height="600" alt="image" src="https://github.com/user-attachments/assets/99694c80-e10a-4f51-968d-c42b92dd3954" />
+
 
 Python 3.x - Core development and logic.
 
@@ -19,7 +23,10 @@ Discord Webhooks - API interface for sending data to external servers.
 HTML & Jinja2 - Dynamic UI and data presentation.
 
 📂 Project Structure
-Plaintext
+<img width="654" height="493" alt="image" src="https://github.com/user-attachments/assets/73ae1c02-7f18-485b-a6b2-7f6ca26510d8" />
+
+Plaintexs
+
 
 discord-flask-progect/
 
