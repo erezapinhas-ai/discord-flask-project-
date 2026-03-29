@@ -24,10 +24,15 @@ Plaintext
 discord-flask-progect/
 
 ├── app.py              # Main server logic and routes
+
 ├── database.db         # Local database (generated automatically)
+
 └── templates/          # Frontend interface templates
+
     ├── index.html      # Home page & message submission form
+    
     └── history.html    # Message history display page
+    
 Main files
 
 app.py: This file contains the main logic of the server. This is where the user keystrokes are managed, messages are sent to Discord, and the messages sent are recorded.
