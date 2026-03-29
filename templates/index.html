@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שליחה לדיסקורד</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin-top: 50px; background-color: #f4f4f9; }
+        .container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        input, button { width: 100%; padding: 12px; margin-top: 15px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+
+        /* עיצוב כפתור השליחה */
+        .btn-submit { background-color: #5865F2; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .btn-submit:hover { background-color: #4752c4; }
+
+        /* עיצוב כפתור ההיסטוריה */
+        .btn-history {
+            display: inline-block; margin-top: 20px; padding: 10px 20px;
+            background-color: #4e5d6e; color: white; text-decoration: none;
+            border-radius: 5px; font-size: 0.9em; transition: 0.3s;
+        }
+        .btn-history:hover { background-color: #2c2f33; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>שליחת הודעה לדיסקורד</h2>
+
+        <form action="/input_text" method="POST">
+            <input type="text" name="text" placeholder="הקלידי הודעה כאן..." required>
+            <button type="submit" class="btn-submit">שלחי עכשיו</button>
+        </form>
+
+        <hr style="margin-top: 25px; border: 0; border-top: 1px solid #eee;">
+
+        <a href="/history" class="btn-history">צפייה בהודעות מהחצי שעה האחרונה</a>
+    </div>
+</body>
+</html>

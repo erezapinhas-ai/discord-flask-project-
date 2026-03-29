@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>היסטוריית הודעות - 30 דקות אחרונות</title>
+    <style>
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #5865F2; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">הודעות מהחצי שעה האחרונה</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>הודעה</th>
+                <th>זמן שליחה (UTC)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for msg in messages %}
+            <tr>
+                <td>{{ msg[0] }}</td>
+                <td>{{ msg[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="text-align: center;"><a href="/">חזרה לדף השליחה</a></p>
+</body>
+</html>
