@@ -1,10 +1,13 @@
 Discord Flask Project 🚀
+
 A Web application based on Flask that enables sending messages to a Discord server via Webhooks, with real-time logging and history tracking using an SQLite database.
 
 📋 About the Project
+
 This project was developed as part of a hands-on learning process in Backend development and systems integration. The application allows users to send messages directly to a pre-defined Discord channel using Webhooks, while simultaneously storing all message history in a local database for monitoring and auditing.
 
 🛠 Technologies Used
+
 Python 3.x - Core development and logic.
 
 Flask - Web framework for serving the application.
@@ -17,13 +20,29 @@ HTML & Jinja2 - Dynamic UI and data presentation.
 
 📂 Project Structure
 Plaintext
+
 discord-flask-progect/
+
 ├── app.py              # Main server logic and routes
 ├── database.db         # Local database (generated automatically)
 └── templates/          # Frontend interface templates
     ├── index.html      # Home page & message submission form
     └── history.html    # Message history display page
+Main files
+
+app.py: This file contains the main logic of the server. This is where the user keystrokes are managed, messages are sent to Discord, and the messages sent are recorded.
+
+database.db: A database where the messages sent are stored. The database is created automatically when the application is run.
+
+templates/: This folder contains the HTML templates of the interface.
+
+index.html: The home page where the user can send messages.
+
+history.html: A page that allows the user to see the history of messages sent.
+
+    
 📸 Key Features
+
 Direct Messaging Interface: Send text messages to a Discord channel at the click of a button.
 
 Full Logging: Every sent message is saved, including content and exact timestamp.
@@ -40,6 +59,7 @@ This project was created as part of a DevOps and Python development learning jou
 בעברית:
 
 Discord Flask Project 🚀
+
 אפליקציית Web מבוססת Flask לניהול תקשורת עם שרת Discord ותיעוד נתונים בזמן אמת.
 
 📋 אודות הפרויקט
