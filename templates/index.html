@@ -13,6 +13,10 @@
         .btn-submit { background-color: #5865F2; color: white; border: none; cursor: pointer; font-weight: bold; }
         .btn-submit:hover { background-color: #4752c4; }
 
+        /* עיצוב כפתור ההגדרות */
+        .btn-settings { background-color: #2ecc71; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .btn-settings:hover { background-color: #27ae60; }
+
         /* עיצוב כפתור ההיסטוריה */
         .btn-history {
             display: inline-block; margin-top: 20px; padding: 10px 20px;
@@ -20,20 +24,30 @@
             border-radius: 5px; font-size: 0.9em; transition: 0.3s;
         }
         .btn-history:hover { background-color: #2c2f33; }
+
+        .url-display { font-size: 0.75em; color: #666; margin-top: 5px; word-break: break-all; background: #eee; padding: 5px; border-radius: 3px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>שליחת הודעה לדיסקורד</h2>
+        <h2>הגדרות Webhook</h2>
+        <p style="font-size: 0.9em; margin-bottom: 0;">כתובת נוכחית:</p>
+        <div class="url-display">{{ current_url if current_url else 'טרם הוגדרה כתובת' }}</div>
 
+        <form action="/update_settings" method="POST">
+            <input type="text" name="discord_url" placeholder="הדביקי כאן כתובת Discord Webhook..." required>
+            <button type="submit" class="btn-settings">עדכני כתובת</button>
+        </form>
+
+        <hr style="margin-top: 25px; border: 0; border-top: 1px solid #eee;">
+
+        <h2>שליחת הודעה</h2>
         <form action="/input_text" method="POST">
             <input type="text" name="text" placeholder="הקלידי הודעה כאן..." required>
             <button type="submit" class="btn-submit">שלחי עכשיו</button>
         </form>
 
-        <hr style="margin-top: 25px; border: 0; border-top: 1px solid #eee;">
-
-        <a href="/history" class="btn-history">צפייה בהודעות מהחצי שעה האחרונה</a>
+        <a href="/history" class="btn-history">צפייה בהודעות אחרונות</a>
     </div>
 </body>
 </html>

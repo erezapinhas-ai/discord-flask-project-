@@ -1,129 +1,69 @@
-Discord Flask Project 🚀
+🚀 Discord Webhook Manager (Full-Stack Web App)
+A professional, easy-to-use desktop application designed to streamline sending messages to Discord channels via Webhooks. Built with Python and Flask, this project features a local database for message history and an automated standalone executable (EXE) for end-users.
 
-A Web application based on Flask that enables sending messages to a Discord server via Webhooks, with real-time logging and history tracking using an SQLite database.
+✨ Features
+User-Friendly Web Interface: Clean HTML/CSS interface for message input and configuration.
 
-📋 About the Project
+Discord Integration: Instant communication with Discord using Webhook URLs.
 
-This project was developed as part of a hands-on learning process in Backend development and systems integration. The application allows users to send messages directly to a pre-defined Discord channel using Webhooks, while simultaneously storing all message history in a local database for monitoring and auditing.
+Local Database Storage: Uses SQLite to log and display a history of sent messages.
 
-🛠 Technologies Used
+Automated Desktop Experience: A standalone .exe version that automatically launches your default web browser to the app's address.
 
-Python 3.x - Core development and logic.
+Message Persistence: Review your past activity through a dedicated history page.
 
-Flask - Web framework for serving the application.
+🛠️ Technology Stack
+Backend: Python 3.x, Flask
 
-SQLite - Lightweight database for history management.
+Database: SQLite3
 
-Discord Webhooks - API interface for sending data to external servers.
+Networking: Requests (HTTP Library)
 
-HTML & Jinja2 - Dynamic UI and data presentation.
+Frontend: HTML5, CSS3
+
+Distribution: PyInstaller (Standalone Executable)
 
 📂 Project Structure
 Plaintext
+.
+├── project_webhook.py      # Main application logic & Flask server
+├── messages.db             # SQLite database (generated on first run)
+├── templates/              # Frontend UI folder
+│   ├── index.html          # Main control panel
+│   └── history.html        # Message history viewer
+└── dist/                   # Contains the portable .exe version
+🚀 Getting Started
+Option 1: Running the Executable (Recommended for Users)
+Navigate to the dist/ folder.
 
-discord-flask-progect/
+Run project_webhook.exe.
 
-├── app.py              # Main server logic and routes
+A terminal window will open, and your web browser will automatically launch at http://127.0.0.1:5000.
 
-├── database.db         # Local database (generated automatically)
+Option 2: Running from Source (For Developers)
+Clone the repository:
 
-└── templates/          # Frontend interface templates
+Bash
+git clone https://github.com/erezapinhas-ai/discord-flask-project.git
+Install dependencies:
 
-    ├── index.html      # Home page & message submission form
-    
-    └── history.html    # Message history display page
-    
-Main files
+Bash
+pip install -r requirements.txt
+Run the application:
 
-app.py: This file contains the main logic of the server. This is where the user keystrokes are managed, messages are sent to Discord, and the messages sent are recorded.
+Bash
+python project_webhook.py
+🛠️ Build Process (DevOps Notes)
+To package this application into a standalone EXE, the following command was used:
 
-database.db: A database where the messages sent are stored. The database is created automatically when the application is run.
+Bash
+python -m PyInstaller --clean --onefile --hidden-import="requests" --add-data "templates/*;templates" project_webhook.py
+🛡️ Important Note on Security
+When running the .exe for the first time, Windows SmartScreen may display a warning.
 
-templates/: This folder contains the HTML templates of the interface.
+Click "More Info"
 
-index.html: The home page where the user can send messages.
+Select "Run Anyway"
+This occurs because the application is a custom-built tool and is not digitally signed by a commercial CA.
 
-history.html: A page that allows the user to see the history of messages sent.
-
-    
-📸 Key Features
-
-Direct Messaging Interface: Send text messages to a Discord channel at the click of a button.
-
-Full Logging: Every sent message is saved, including content and exact timestamp.
-
-History Viewer: A dedicated page displaying all previously sent messages in an organized list.
-
-Filtering Mechanism: Option to view only messages sent within the last 30 minutes.
-
-This project was created as part of a DevOps and Python development learning journey.
-
-
-
-
-בעברית:
-
-Discord Flask Project 🚀
-
-אפליקציית Web מבוססת Flask לניהול תקשורת עם שרת Discord ותיעוד נתונים בזמן אמת.
-
-📋 אודות הפרויקט
-פרויקט זה פותח כחלק מתרגול מעשי של פיתוח Backend ואינטגרציה בין מערכות. האפליקציה מאפשרת למשתמש לשלוח הודעות ישירות לערוץ דיסקורד מוגדר מראש באמצעות Webhooks, ובמקביל שומרת את כל היסטוריית ההודעות בבסיס נתונים מקומי לצורך מעקב ובקרה.
-
-🛠 טכנולוגיות בשימוש
-Python 3.x - ליבת הפיתוח והלוגיקה.
-
-Flask - תשתית ה-Web להגשת האפליקציה.
-
-SQLite - בסיס נתונים קליל לניהול ההיסטוריה.
-
-Discord Webhooks - ממשק API לשליחת מידע לשרת חיצוני.
-
-HTML & Jinja2 - בניית ממשק משתמש דינמי ותצוגת נתונים.
-
-📂מבנה הפרויקט
-
-Plaintext
-
-discord-flask-progect/
-
-├── app.py              # 
-קובץ השרת והלוגיקה המרכזית
-├── database.db         # 
-בסיס נתונים (נוצר אוטומטית)
-└── templates/          # תבניות הממשק (Frontend)
-
-    ├── index.html      # 
-    דף הבית ושליחת ההודעות
-    └── history.html    # 
-    דף היסטוריית ההודעות המוקלטות
-
-
-קבצים עיקריים
-
-
-app.py: קובץ זה מכיל את הלוגיקה המרכזית של השרת. כאן מתבצע ניהול הבקשות מהמשתמשים, שליחת ההודעות ל-Discord, ותיעוד ההודעות שנשלחו.
-
-database.db: בסיס הנתונים שבו נשמרות ההודעות שנשלחו. בסיס הנתונים נוצר אוטומטית בעת הרצת האפליקציה.
-
-templates/: תיקייה זו מכילה את תבניות ה-HTML של הממשק.
-
-index.html: דף הבית שבו המשתמש יכול לשלוח הודעות.
-
-history.html: דף המאפשר למשתמש לצפות בהיסטוריית ההודעות שנשלחו.
-
-
-תכונות עיקריות
-ממשק שליחה ישיר: שליחת הודעות טקסט לערוץ דיסקורד בלחיצת כפתור.
-
-תיעוד מלא (Logging): שמירת כל הודעה שנשלחה, כולל תוכן ההודעה ושעת השליחה המדויקת.
-
-צפייה בהיסטוריה: הצגת רשימת כל ההודעות שנשלחו בעבר בצורה מסודרת.
-
-מנגנון סינון: אפשרות לצפות בהודעות מה-30 דקות האחרונות בלבד.
-
-פרויקט זה נוצר כחלק מתהליך למידה והתמקצעות בתחום ה-DevOps והפיתוח ב-Python
-
-
-
-
+Developed as part of a DevOps engineering journey. 💻🌐
